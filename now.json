@@ -1,0 +1,23 @@
+{
+  "name": "my-api",
+  "version": 2,
+  "builds": [
+    { "src": "*.js", "use": "@now/node" }
+  ],
+  "routes": [
+    {
+      "src": ".*",
+      "methods": ["GET", "POST", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+        "Access-Control-Allow-Credentials": "true"
+      },
+      "dest": "index.js",
+      "continue": true
+    },
+    {
+      "src": "/user/login", "methods": ["POST"], "dest": "index.js"
+    }
+  ]
+}

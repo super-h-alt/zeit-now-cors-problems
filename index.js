@@ -1,5 +1,3 @@
-require('dotenv').config(); // require dotenv lib & use as: process.env.ENV_VAR
-
 // init required vars for project
 const express = require('express'), app = express(),
 	  bodyParser = require('body-parser'),
